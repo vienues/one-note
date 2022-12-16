@@ -1,0 +1,331 @@
+$dark-sidebar: #333;
+$dark-editor: #3f3f3f;
+
+.dark {
+  a {
+    color: lighten($primary, 8%);
+    &:hover {
+      color: lighten($primary, 15%);
+    }
+    &.button {
+      color: white;
+    }
+  }
+
+  .loading {
+    background: #222;
+  }
+
+  .app-sidebar {
+    border-right: 1px solid darken($dark-sidebar, 8%);
+  }
+
+  .note-menu-bar {
+    background: darken($dark-sidebar, 6%);
+    border-color: darken($dark-sidebar, 12%);
+
+    button {
+      color: rgba(255, 255, 255, 0.5);
+      &.trash {
+        &:hover {
+          color: darken($error, 8%);
+        }
+      }
+      &:hover {
+        color: rgba(255, 255, 255, 0.7);
+        background: darken($dark-sidebar, 10%);
+      }
+    }
+  }
+
+  .note-sidebar {
+    background: darken($dark-sidebar, 6%);
+    border-right: 1px solid darken($dark-sidebar, 8%);
+
+    .note-sidebar-header {
+      color: $light-font-color;
+      background: darken($dark-sidebar, 4%);
+      border-color: darken($dark-sidebar, 12%);
+
+      input {
+        background: lighten($dark-sidebar, 5%);
+        color: $light-font-color;
+        border: 1px solid darken($dark-sidebar, 10%);
+      }
+    }
+
+    .list-button {
+      color: $light-font-color;
+      background: darken($dark-sidebar, 8%);
+      border: 1px solid darken($dark-sidebar, 1%);
+
+      &:hover,
+      &:focus {
+        color: white;
+        background: darken($variable, 10%);
+      }
+    }
+
+    .note-list {
+      .note-list-each {
+        border-bottom: 1px solid darken($dark-sidebar, 10%);
+        color: darken($light-font-color, 10%);
+
+        &.active:hover .note-options {
+          color: white;
+        }
+
+        .note-category {
+          color: rgba(255, 255, 255, 0.3);
+        }
+
+        &:hover {
+          background: $dark-sidebar;
+          .note-options {
+            color: #888;
+          }
+        }
+
+        &.selected {
+          background: $primary;
+          color: white;
+          border-bottom: 1px solid darken($primary, 5%);
+
+          &:hover {
+            .note-options {
+              color: white;
+            }
+          }
+
+          .note-options {
+            &.active {
+              color: white;
+            }
+          }
+          .note-category {
+            color: rgba(255, 255, 255, 0.7);
+          }
+        }
+
+        .note-options {
+          &.active {
+            color: #888;
+          }
+        }
+      }
+    }
+  }
+
+  .options-context-menu {
+    border: 1px solid darken($dark-sidebar, 8%);
+    background: $app-sidebar-color;
+    color: $light-font-color;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.25);
+
+    svg {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    select {
+      background: lighten($dark-sidebar, 8%);
+      color: $light-font-color;
+      border: 1px solid darken($dark-sidebar, 5%);
+    }
+  }
+
+  .options-nav {
+    .nav-item {
+      &:hover {
+        color: white;
+        background: lighten($app-sidebar-color, 8%);
+
+        svg {
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+      &.delete-option {
+        &:hover {
+          background: darken($error, 10%);
+          color: white;
+        }
+      }
+    }
+  }
+
+  .empty-editor {
+    background: $dark-editor;
+    color: $light-font-color;
+  }
+
+  .editor .CodeMirror-activeline-background {
+    background: #222 !important;
+  }
+
+  .previewer {
+    background: darken($dark-editor, 5%);
+    color: $light-font-color;
+
+    a {
+      color: $tag;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $attribute;
+    }
+
+    table,
+    thead th,
+    tfoot th,
+    td {
+      border-color: darken($dark-editor, 20%);
+    }
+
+    code {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid $dark-editor;
+    }
+
+    pre {
+      background: darken($dark-editor, 10%);
+      border: 1px solid $dark-editor;
+
+      code {
+        color: $code-font-color;
+        background: transparent;
+        border-width: 0;
+      }
+    }
+
+    hr {
+      height: 0;
+      border: 0;
+      border-top: 2px solid darken($dark-editor, 5%);
+    }
+
+    blockquote {
+      border-color: darken($dark-editor, 10%);
+    }
+  }
+
+  .preview-button {
+    background: $app-sidebar-color;
+    color: #ccc;
+
+    &:hover {
+      background: darken($app-sidebar-color, 5%);
+    }
+  }
+
+  .settings-modal {
+    background: $dark-sidebar;
+    color: $light-font-color;
+    .settings-modal-header {
+      border-color: darken($dark-sidebar, 5%);
+    }
+    .subtitle {
+      color: darken($light-font-color, 20%);
+    }
+    .settings-option {
+      border-color: darken($dark-sidebar, 5%);
+      h3 {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .description {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .close-button {
+      &:hover,
+      &:active {
+        background: darken($dark-sidebar, 5%);
+      }
+    }
+
+    select {
+      background: lighten($dark-sidebar, 8%);
+      color: $light-font-color;
+      border: 1px solid darken($dark-sidebar, 5%);
+
+      &:active &:focus {
+        border: 1px solid darken($primary, 20%);
+        box-shadow: 0 0 0.2rem darken($primary, 20%);
+      }
+    }
+  }
+
+  kbd {
+    background: darken($dark-sidebar, 5%);
+    border: 1px solid darken($dark-sidebar, 10%);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 0 2px #222 inset;
+    color: darken($light-font-color, 10%);
+    text-shadow: 0 1px 0 #000;
+  }
+
+  .cache {
+    border: 1px solid black;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: $app-sidebar-color;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: lighten($app-sidebar-color, 8%);
+    border-radius: 0;
+  }
+  .Resizer {
+    opacity: 1;
+  }
+
+  .uuid-menu-bar {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .last-synced {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .tab-list {
+    border-color: darken($dark-sidebar, 10%);
+  }
+
+  .tabs {
+    p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    h3 {
+      color: white;
+    }
+  }
+
+  .tab {
+    svg {
+      color: rgba(255, 255, 255, 0.4);
+    }
+    &.active {
+      background: darken($dark-sidebar, 6%) !important;
+      color: white;
+      svg {
+        color: $primary !important;
+      }
+    }
+    &:hover {
+      background: lighten($dark-sidebar, 6%);
+      color: white;
+      svg {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+
+  .slider {
+    background-color: darken($dark-sidebar, 10%);
+  }
+}

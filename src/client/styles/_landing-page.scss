@@ -1,0 +1,147 @@
+.landing-page {
+  a {
+    color: $primary;
+    text-decoration: none;
+    font-weight: 600;
+    &.button {
+      font-size: 1.1rem;
+      color: white !important;
+      margin: 0;
+      font-weight: 600;
+    }
+    &:hover {
+      color: darken($primary, 15%);
+    }
+  }
+
+  p,
+  ul,
+  li {
+    color: #404040;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+
+  code {
+    font-size: 0.9rem;
+    background: #f0f0f0;
+  }
+
+  .new-signup {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid $note-sidebar-color;
+    margin: 2rem 0;
+  }
+
+  .p-mobile {
+    color: $primary !important;
+    font-weight: 600;
+    margin: 1rem auto 1.5rem;
+  }
+
+  .content {
+    padding: 1rem 0;
+    background: lighten($note-sidebar-color, 5%);
+
+    .lead {
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 2rem;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 1.1;
+      letter-spacing: -0.03rem;
+      margin-bottom: 0;
+
+      @include small-breakpoint {
+        font-size: 3rem;
+      }
+    }
+
+    .subtitle {
+      color: #888;
+      line-height: 1.6;
+      font-size: 1.2rem;
+      margin: 1rem auto 1.5rem;
+
+      @include small-breakpoint {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+    &-small {
+      @extend .container;
+      max-width: 800px;
+    }
+  }
+
+  .screenshot {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    @include small-breakpoint {
+      font-size: 2rem;
+    }
+  }
+
+  .footer {
+    background: $primary;
+    padding: 2rem 0;
+    text-align: center;
+    color: white;
+
+    p {
+      color: white;
+    }
+
+    @include small-breakpoint {
+      padding: 4rem 0;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto;
+      height: 50px;
+      width: 50px;
+      margin-bottom: 2rem;
+
+      @include small-breakpoint {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 4rem;
+      }
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      &:hover {
+        color: white;
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+
+      a {
+        margin: 0 0.75rem;
+      }
+    }
+  }
+}

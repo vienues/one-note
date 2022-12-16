@@ -1,0 +1,52 @@
+// Sizes
+$app-sidebar-width: 240px;
+$note-sidebar-width: 340px;
+
+$mobile: 575px;
+$tablet: 768px;
+$desktop: 991px;
+
+$note-header-height: 60px;
+
+// Colors
+$primary: #5183f5;
+$font-color: #404040;
+$light-font-color: #d0d0d0;
+$app-sidebar-color: #2d2d2d;
+$note-sidebar-color: #e5e5e5;
+$light-theme-background: #f5f5f5;
+$accent-gray: #d0d0d0;
+$accent-lightgray: lighten($accent-gray, 12%);
+$dimmer-background: rgba(0, 0, 0, 0.6);
+$error: #f2777a;
+
+$box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+// Font
+$sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+  'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+$monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+// Elements
+$buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]');
+$forms: (
+  '[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea'
+);
+
+// New Moon
+
+$code-font-color: #b3b9c5;
+$string: #92d192;
+$variable: #f2777a;
+$property: #abb2bf;
+$number: #fca369;
+$operator: #ac8d58;
+$punctuation: #d5d8df;
+$comment: #777c85;
+$function: #62cfcf;
+$keyword: #ffeead;
+$attribute: #ffd479;
+$class: #e1a6f2;
+$tag: #6ab0f3;
+$error: #f2777a;

@@ -1,0 +1,40 @@
+.empty-editor {
+  background: $light-theme-background;
+  width: 100%;
+}
+
+.editor {
+  overflow-y: auto;
+}
+
+.CodeMirror {
+  -webkit-font-smoothing: subpixel-antialiased;
+  padding: 1rem;
+  height: 100%;
+  font-family: Menlo, Monaco, monospace;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.CodeMirror-lines {
+  padding: 0;
+}
+
+.CodeMirror-linenumber {
+  padding-right: 15px;
+}
+
+.CodeMirror-gutter-background {
+  color: #333;
+}
+
+.CodeMirror-activeline-background {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+
+.cm-notelink {
+  font-style: italic;
+  font-weight: bold;
+  color: #0daba3;
+}

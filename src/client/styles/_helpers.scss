@@ -1,0 +1,250 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.v-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .slider {
+      background: #72ce6e;
+    }
+
+    &:focus + .slider {
+      box-shadow: 0 0 1px #72ce6e;
+    }
+
+    &:checked + .slider:before {
+      transform: translateX(26px);
+    }
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $accent-gray;
+  transition: 0.4s;
+  border-radius: 34px;
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.07), 2px 3px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+kbd {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+  color: #333;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0 0.1em;
+  padding: 0.1em 0.6em;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.action-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 0.8rem;
+  margin: 0 0.5rem;
+  border: none !important;
+}
+
+::-webkit-scrollbar-corner {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: darken($note-sidebar-color, 10%);
+  border-radius: 0;
+}
+
+/*!
+ * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Licensed under MIT
+ */
+.la-ball-beat,
+.la-ball-beat > div {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.la-ball-beat {
+  display: block;
+  font-size: 0;
+  color: $primary;
+  width: 54px;
+  height: 18px;
+}
+
+.la-ball-beat.la-dark {
+  color: #333;
+}
+
+.la-ball-beat > div {
+  display: inline-block;
+  float: none;
+  background-color: currentColor;
+  border: 0 solid currentColor;
+  width: 10px;
+  height: 10px;
+  margin: 4px;
+  border-radius: 50%;
+  animation: ball-beat 0.7s -0.15s infinite linear;
+}
+
+.la-ball-beat > div:nth-child(2n-1) {
+  animation-delay: -0.5s;
+}
+
+.la-ball-beat.la-sm {
+  width: 26px;
+  height: 8px;
+}
+
+.la-ball-beat.la-sm > div {
+  width: 4px;
+  height: 4px;
+  margin: 2px;
+}
+
+.la-ball-beat.la-2x {
+  width: 108px;
+  height: 36px;
+}
+
+.la-ball-beat.la-2x > div {
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+}
+
+.la-ball-beat.la-3x {
+  width: 162px;
+  height: 54px;
+}
+
+.la-ball-beat.la-3x > div {
+  width: 30px;
+  height: 30px;
+  margin: 12px;
+}
+
+@keyframes ball-beat {
+  50% {
+    opacity: 0.2;
+    transform: scale(0.75);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.rotating-svg {
+  animation-name: rotating;
+  animation-duration: 15.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  display: inline-block;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
